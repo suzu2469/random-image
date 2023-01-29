@@ -32,7 +32,7 @@ const Login = () => {
     })
 
     return (
-        <Paper radius="md" p="xl" withBorder>
+        <Paper radius="md" p="xl" mt="xl" withBorder>
             <Text size="lg" weight={600}>
                 Login
             </Text>

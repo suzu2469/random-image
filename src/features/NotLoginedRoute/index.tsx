@@ -1,6 +1,7 @@
-import { useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { userContext } from '@/context/user'
 import { useRouter } from 'next/router'
+import { Center, Loader } from '@mantine/core'
 
 export const NotLoginedRoute: React.FC<React.PropsWithChildren> = ({
     children,
@@ -15,5 +16,11 @@ export const NotLoginedRoute: React.FC<React.PropsWithChildren> = ({
         }
     }, [user, router])
 
+    if (!user.isInitialized)
+        return (
+            <Center style={{ height: '100vh' }}>
+                <Loader />
+            </Center>
+        )
     return <>{children}</>
 }

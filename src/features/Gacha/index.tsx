@@ -38,8 +38,13 @@ const Gacha = () => {
                 ランダムな画像を見る
             </Button>
             <Link href="/create">
-                <Button mt="xl" variant="subtle" leftIcon={<IconUpload />}>
+                <Button mt="sm" variant="subtle" leftIcon={<IconUpload />}>
                     画像をアップロードする
+                </Button>
+            </Link>
+            <Link href="/logout">
+                <Button mt="sm" variant="subtle" compact color="gray">
+                    ログアウト
                 </Button>
             </Link>
         </Flex>
