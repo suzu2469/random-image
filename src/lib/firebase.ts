@@ -5,6 +5,8 @@ import {
     setPersistence,
     indexedDBLocalPersistence,
 } from '@firebase/auth'
+import { getFirestore } from '@firebase/firestore'
+import { getStorage } from '@firebase/storage'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyA5lW37KeIu3ezw_eES7DkGvGmBThgeu4w',
@@ -21,7 +23,12 @@ export const actionCodeSettings: ActionCodeSettings = {
 }
 
 const app = initializeApp(firebaseConfig)
+
 export const auth = getAuth(app)
 setPersistence(auth, indexedDBLocalPersistence)
+
+export const firestore = getFirestore(app)
+
+export const cloudStorage = getStorage(app)
 
 export default app
