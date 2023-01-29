@@ -1187,7 +1187,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tabler/icons@npm:2.1.2, @tabler/icons@npm:^2.1.2":
+"@tabler/icons@npm:2.1.2":
   version: 2.1.2
   resolution: "@tabler/icons@npm:2.1.2"
   checksum: bce682e783c2c6cb27b3dc8bded11c2c003bc6afe4234487826d4b19790ff393b827027ff564bba5604a1b5092406a0fbb47f86171e391799155819881acd87b
@@ -2023,7 +2023,6 @@ __metadata:
     "@mantine/core": ^5.10.2
     "@mantine/hooks": ^5.10.2
     "@next/font": 13.1.6
-    "@tabler/icons": ^2.1.2
     "@tabler/icons-react": ^2.1.2
     "@types/node": 18.11.18
     "@types/react": 18.0.27
