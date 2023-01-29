@@ -1,9 +1,9 @@
 import { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core'
 import { Provider as UserProvider } from '@/context/user'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClientProvider } from 'react-query'
+import { queryClient } from '@/lib/reactQuery'
 
-const queryClient = new QueryClient()
 export default function MyApp({ Component, pageProps }: AppProps) {
     return (
         <QueryClientProvider client={queryClient}>
