@@ -1,4 +1,12 @@
-import { Button, FileInput, Image, Paper, Stack, Text } from '@mantine/core'
+import {
+    Button,
+    FileInput,
+    Image,
+    Loader,
+    Paper,
+    Stack,
+    Text,
+} from '@mantine/core'
 import { useContext, useState } from 'react'
 import { useMutation, useQueryClient } from 'react-query'
 import { cloudStorage, firestore } from '@/lib/firebase'
@@ -54,7 +62,10 @@ const CreateNewImage = () => {
                 />
                 <Button
                     fullWidth
-                    disabled={image === null}
+                    leftIcon={
+                        mutation.isLoading ? <Loader size={14} /> : undefined
+                    }
+                    disabled={image === null || mutation.isLoading}
                     onClick={() => {
                         mutation
                             .mutateAsync(image as File)
